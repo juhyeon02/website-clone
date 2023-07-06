@@ -23,6 +23,7 @@
   justify-content: space-between;
   padding: 30px 6px 25px 5px;
   margin: 0 24.5px;
+  align-items: center;
 }
 
 .header_main h1 {
@@ -39,61 +40,95 @@
   object-fit: contain;
 }
 
-.header_main span {
+.header_main h1 span {
   font-size: 16px;
   font-weight: lighter;
   margin: 0;
+  letter-spacing: 5px;
 }
 
 /* main_ul */
-.header_main ul {
-  list-style: none;
-}
 
 .header_wrap {
   display: flex;
   margin: 0;
-  flex-wrap: wrap;
-  justify-content: end;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  width: 500px;
 }
-
-.header_main li img {
-  width: 36px;
-  height: 36px;
+.header_wrap ul {
+  list-style: none;
+  align-items: center;
 }
-.header_main li {
+.header_wrap li {
+  list-style: none;
+}
+.header_wrap li :not(.header_wrap_hyundae img) {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 0 10px;
+  /* padding: 0 10px; */
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  object-fit: contain;
+}
+.header_wrap li img :not(.header_wrap_hyundae img) {
+  width: 36px;
+  height: 36px;
+  vertical-align: center;
+  /* object-fit: contain; */
+}
+
+.header_wrap span {
+  font-size: smaller;
+  margin: 0 auto;
+}
+
+li .header_wrap_hyundae {
+  text-align: end;
 }
 
 /* nav */
-.header_nav {
+#navbar {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  top: 113px;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+}
+#navbar.active {
+  background: #fb4357;
+  color: white;
+  font-weight: bold;
+}
+
+#navbar.fix {
+  position: fixed;
+  top: 0;
 }
 
 .header_nav_list {
   display: flex;
-  justify-content: space-evenly;
-}
-
-.header_nav_list ul {
-  padding: 10px;
+  margin: 0;
+  padding-left: 0;
 }
 
 .header_nav_list li {
   list-style: none;
-  padding: 0 1.5em;
+  padding: 0 1.7em;
 }
 
 .header_nav_search {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  width: 12px;
+  width: 16px;
   line-height: 1.2;
+  padding-right: 0 15px;
 }
 .header_nav_search img {
   position: absolute;
@@ -103,8 +138,10 @@
   height: 26px;
 }
 input {
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
-  border-right: none;
-  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  height: 45px;
+  width: 180px;
 }

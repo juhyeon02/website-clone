@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CGV</title>
     <link rel="stylesheet" href="/website-clone/cgv/header.css" />
+    <link rel="stylesheet" href="/website-clone/cgv/body.css" />
   </head>
 
   <body>
@@ -51,7 +52,7 @@
         </ul>
       </div>
       <!-- nav -->
-      <div class="header_nav">
+      <div id="navbar">
         <ul class="header_nav_list">
           <li>영화</li>
           <li>극장</li>
@@ -66,7 +67,32 @@
         </div>
       </div>
     </div>
+    <!-- body -->
 
-    <footer></footer>
+    <!-- video -->
+
+    <div class="video">
+      <iframe
+        width="980"
+        height="498"
+        src="https://www.youtube.com/embed/mwzJU58eTiE?controls=0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <!-- 무비차트, 상영예정작 -->
+    <div class="moviechart">
+      <div class="movie_btn">
+        <div class="tab_btn">
+          <h3>무비차트</h3>
+          <h3>상영예정작</h3>
+          <span>전체보기</span>
+        </div>
+      </div>
+      <div class="movie_poster"></div>
+    </div>
+    <script src="/website-clone/cgv/header.js"></script>
   </body>
 </html>
